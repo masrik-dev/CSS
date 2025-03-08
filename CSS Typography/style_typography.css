@@ -1,0 +1,30 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* you can also import the google font styles directly */
+/* Typography is the way that text is arranged and presented */
+
+body {
+    padding: 10%;
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+    /* font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings: "wdth" 100; */
+    /* Those comment codes are in google font family style class. don't know if it works or not. */
+}
+
+input, button {
+    font: inherit;
+}
+
+p {
+    text-decoration: none;
+    text-transform: none;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    word-spacing: 0.1em;
+    font-weight: normal;
+    font-style: oblique;
+}

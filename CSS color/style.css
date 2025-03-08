@@ -46,7 +46,7 @@ header{
 }
 
 main {
-    width: 40%;
+    width: 50%;
     background-color: skyblue;
     font-size: 2rem;
 }
@@ -67,3 +67,30 @@ p {
     outline-offset: 0.25rem;
 }
 
+/* Typography is the way that text is arranged and presented */
+
+.typography {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+    body{
+        padding: 10%;
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+    }
+
+    input, button {
+        font: inherit;
+    }
+
+    p {
+        text-decoration: none;
+        text-transform: none;
+        text-align: justify;
+        text-indent: 2em;
+        line-height: 1.5;
+        letter-spacing: 0.1em;
+        word-spacing: 0.1em;
+        font-weight: normal;
+        font-style: normal;
+    }
+}
