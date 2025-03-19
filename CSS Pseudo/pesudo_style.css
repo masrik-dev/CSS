@@ -35,6 +35,22 @@ body {
     flex-direction: column;
 }
 
+/* Using :is to apply styles with maintained specificity */
+/* :is(header, footer, .card) {
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+} */
+
+ /* Using :where to apply styles without increasing specificity */
+ /* :where(header, footer, .card) {
+    position: sticky;
+    background-color: #1e293b;
+    color: whitesmoke;
+    text-align: center;
+} */
+
 header, footer {
     position: sticky;
     background-color: #1e293b;
@@ -55,13 +71,19 @@ nav {
     justify-content: space-evenly;
 }
 
-nav a, nav a:visited {
+/* PESUDO CLASS */
+nav a:any-link {
     color: #000;
 }
 
-nav a:hover, nav a:focus {
+nav :is(a:hover, a:focus) {
     color: hsla(0, 0%, 20%, 0.6)
 }
+
+nav a:active {
+    color: red;
+}
+/* PESUDO CLASS - END */
 
 main {
     flex-grow: 1;
@@ -89,6 +111,10 @@ footer {
     align-items: center;
 }
 
+.card:target {
+    border: 2px solid rebeccapurple;
+}
+
 .card figure {
     display: flex;
     flex-flow: column nowrap;
@@ -99,12 +125,64 @@ footer {
     border-radius: 50%;
 }
 
+/* PESUDO CLASS */
+
+/* In which img we put "alt" atribute. */
+/* .card img[alt] {
+    border: 10px solid red;
+} */
+
+/* In which img we forget to put "alt" atribute. */
+.card img:not([alt]) {
+    border: 10px solid red;
+}
+
+.card:nth-child(2) {
+    background-color: papayawhip;
+}
+
+/* PESUDO CLASS - END */
+
 .card figcaption {
     font-weight: bolder;
     font-size: 2rem;
     margin: 1rem;
     text-align: center;
 }
+
+/* PESUDO ELEMENT */
+
+.card figcaption::after {
+    content: '📞';
+    display: block;
+}
+
+.card p {
+    position: relative;
+}
+.card p::before {
+    content: open-quote;
+    font-size: 3em;
+    position: absolute;
+    top: -0.25em;
+    left: -0.5em;
+}
+.card p::after {
+    content: close-quote;
+    font-size: 3em;
+    position: absolute;
+    top: -0.25em;
+    right: -0.5em;
+}
+
+.card figcaption::first-letter {
+    font-size: 3rem;
+}
+.card figcaption::first-line {
+    font-size: 2rem;
+}
+
+/* PESUDO ELEMENT - END */
 
 /* || SMALL */
 @media screen and (min-width: 576px) {
