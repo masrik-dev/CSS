@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --HEADER-BGCOLOR: #000;
+    --HEADER-COLOR: whitesmoke;
+}
+
+html {
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    background-color: midnightblue;
+    background-image: linear-gradient(to right, midnightblue, rebeccapurple);
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+header {
+    color: var(--HEADER-COLOR);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header-title-line {
+    background-color: var(--HEADER-BGCOLOR);
+    padding: 0.25rem 0.5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.menu-button {
+    background-color: transparent;
+    border: none;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
